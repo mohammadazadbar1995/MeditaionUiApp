@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "MeditationUiApp"
 include(":app")
- 
+include(":library:designsystem")

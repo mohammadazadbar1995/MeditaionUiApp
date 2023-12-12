@@ -33,6 +33,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.example.designsystem.preview_provider.ThemePreview
+import com.example.designsystem.theme.MeditationUiAppTheme
 import com.meditationui.Feature
 import com.meditationui.R
 
@@ -124,7 +126,7 @@ fun ChipSection(
 
 @Composable
 fun CurrentMediationSection(
-    color: Color = LightRed,
+    color: Color = com.example.designsystem.theme.LightRed,
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -140,13 +142,13 @@ fun CurrentMediationSection(
             Text(
                 text = "Daily Thought",
                 style = MaterialTheme.typography.headlineSmall,
-                color = TextWhite
+                color = com.example.designsystem.theme.TextWhite
             )
 
             Text(
                 text = "Meditation 3-10 min",
                 style = MaterialTheme.typography.bodySmall,
-                color = TextWhite
+                color = com.example.designsystem.theme.TextWhite
             )
         }
 
@@ -154,7 +156,7 @@ fun CurrentMediationSection(
             contentAlignment = Alignment.Center,
             modifier = Modifier
                 .clip(CircleShape)
-                .background(ButtonBlue)
+                .background(com.example.designsystem.theme.ButtonBlue)
                 .size(40.dp)
                 .padding(10.dp)
         ) {
@@ -163,7 +165,7 @@ fun CurrentMediationSection(
                     id = R.drawable.ic_play
                 ),
                 contentDescription = "Play",
-                tint = TextWhite,
+                tint = com.example.designsystem.theme.TextWhite,
                 modifier = Modifier.size(16.dp)
             )
         }
@@ -211,7 +213,15 @@ fun FeatureItem(
             .aspectRatio(1f)
             .background(feature.darkColor)
     ) {
-        val width = constraints.maxWidth
-        val height = constraints.maxHeight
+//        val width = constraints.maxWidth
+//        val height = constraints.maxHeight
+    }
+}
+
+@ThemePreview
+@Composable
+fun HomeScreenPreview() {
+    MeditationUiAppTheme {
+        HomeScreen()
     }
 }
