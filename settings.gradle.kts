@@ -16,3 +16,6 @@ dependencyResolutionManagement {
 rootProject.name = "MeditationUiApp"
 include(":app")
 include(":library:designsystem")
+include(":domain:menu")
+include(":feauter:bottomMenu")
+include(":feauter:currentsection")
